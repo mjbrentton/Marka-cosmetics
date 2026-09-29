@@ -1,0 +1,224 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #FAF9F6; /* soft off-white */
+  color: #333;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #4E342E, #B76E79); /* mocha to rose gold */
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .logo img {
+  height: 55px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #FFDAB9; /* peach accent */
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(78,52,46,0.6), rgba(183,110,121,0.6)),
+              url('hero-bg.jpg') center/cover no-repeat;
+  text-align: center;
+  padding: 120px 20px;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-top: 15px;
+}
+
+/* Sections */
+section {
+  padding: 70px 20px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  color: #4E342E;
+}
+
+/* Catalogue */
+.product-grid {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+  width: 240px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.view-btn {
+  background: #B76E79; /* rose gold */
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  margin-top: 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.view-btn:hover {
+  background: #4E342E; /* mocha */
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.social-icons a {
+  font-size: 2rem;
+  transition: color 0.3s;
+}
+
+.social-icons a .fa-whatsapp { color: #25D366; }
+.social-icons a .fa-facebook { color: #1877F2; }
+.social-icons a .fa-instagram { color: #E1306C; }
+.social-icons a .fa-tiktok { color: #000; }
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+  background: #4E342E;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background: #fff;
+  margin: 5% auto;
+  padding: 25px;
+  width: 80%;
+  max-width: 750px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.close {
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-images img {
+  max-width: 100%;
+  margin: 12px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.modal-images img:hover {
+  transform: scale(1.05);
+}
+.hero {
+  background: linear-gradient(rgba(78,52,46,0.6), rgba(183,110,121,0.6)),
+              url('images/hero-bg.jpg') center/cover no-repeat;
+  color: #fff;
+  padding: 120px 20px;
+  text-align: center;
+}
+.logo img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;   /* makes it round */
+  object-fit: cover;    /* crops nicely inside circle */
+  cursor: pointer;      /* shows it's clickable */
+  transition: transform 0.3s ease;
+}
+
+.logo img:active {
+  transform: scale(1.2); /* pops out when pressed */
+}
